@@ -152,10 +152,60 @@ const originalQuestions = [
     choices: ['Objectives', 'Subject Matter', 'Assignment', 'Learning Activities'],
     answer:3,
   },
+  {
+    question: 'He is known as Beloved Spanish Governor General',
+    choices: ['Carlos Maria Dela Torre', 'Rafael Izquirdo', 'Manuel Lopez de Legaspi', 'Ferdinand Magellan'],
+    answer:0,
+  },
+  {
+    question: 'This is known as Seal Of Friendship in early Philippines',
+    choices: ['Sandugo','Barter', 'Kalayaan', 'Pueblo'],
+    answer:0,
+  },
+  {
+    question: 'In pre-colonial era in Philippines, This is way of people to get Justified',
+    choices: ['Cortez Suprema','Suez Canal', 'Trial by Ordeal', 'Garrote'],
+    answer: 2,
+  },
+  {
+    question: 'Known as The triumvirate',
+    choices: ['Jaena, Rizal, Del pilar','Rizal, Bonifacio, Luna', 'Jaena, Rizal, Bonifacio', 'Bonifacio, Arellano, Basa'],
+    answer: 0,
+  },
+  {
+    questions: 'He is known as Siling Labuyo',
+    choices: ['Marcelo H. Del pilar','Emilio Jacinto', 'Juan Luna', 'Jose Protacio Rizal Mercado y Alonso Realonda'],
+    answer:0,
+  },
+  {
+    questions: 'He was called as Utak ng Katipunan',
+    choices: ['Antonio Luna','Apolinario Mabini', 'Andres Bonifacio', 'Emilio Jacinto'],
+    answer:3,
+  },
+  {
+    questions: 'This is known as Revised Blooms Taxonomy',
+    choices: ['Harrow Taxonomy','Dave Taxonomy', 'Anderson Taxonomy', 'Kendall and Marzano Taxonomy'],
+    answer:2,
+  },
+  {
+    questions: 'This is Republic Act giving privelage to the Person`s with Disabilities to recognize as Member of Society',
+    choices: ['RA 7272','RA 7277', 'RA 1043', 'RA 1245'],
+    answer:1,
+  },
+  {
+    questions: 'This is Republic Act is known as Rizal`s Law',
+    choices: ['RA 7272','RA 1254', 'RA 1425', 'RA 1245'],
+    answer:2,
+  },
+  {
+    questions: 'This is the Highest Social Class during pre-colonial period',
+    choices: ['Peninsulares','Insulares', 'Timawa', 'Maharlika'],
+    answer:3,
+  },
 ];
 
 
-// Helper function to shuffle
+//pang shuffle
 function shuffleArray(array) {
   return array
     .map((item) => ({ item, sort: Math.random() }))

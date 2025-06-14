@@ -19,7 +19,7 @@ const Login = () => {
 
     if (foundUser) {
       login(foundUser);
-      navigate('/review');
+      navigate('/');
     } else {
       setError('Invalid email or password');
     }

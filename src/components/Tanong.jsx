@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Tanong({ index, data, selected, onSelect, disabled, showAnswer }) {
   return (
-    <div className="card p-3 shadow-sm">
+    <div className="card p-3 shadow-sm bg-info">
       <h5>{index + 1}. {data.question}</h5>
       <div>
         {data.choices.map((choice, i) => {

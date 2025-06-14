@@ -1,70 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import Tanong from './components/Tanong';
-import originalQuestions from './components/questions';
-
-//pang shuffle
-function shuffleArray(array) {
-  return array
-    .map((item) => ({ item, sort: Math.random() }))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ item }) => item);
-}
+// src/App.jsx
+import React from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
+import Review from './components/Review';
+import Login from './components/Login';
+import ProtectedRoute from './ProtectedRoute';
+import { useAuth } from './Authcontext';
 
 export default function App() {
-  const [questions, setQuestions] = useState([]);
-  const [answers, setAnswers] = useState([]);
-  const [submitted, setSubmitted] = useState(false);
-
-  useEffect(() => {
-    const shuffled = shuffleArray(originalQuestions);
-    setQuestions(shuffled);
-    setAnswers(Array(shuffled.length).fill(null));
-  }, []);
-
-  const handleAnswer = (index, choice) => {
-    const updated = [...answers];
-    updated[index] = choice;
-    setAnswers(updated);
-  };
-
-  const handleSubmit = () => {
-    setSubmitted(true);
-  };
-
-  const score = answers.filter((ans, i) => ans === questions[i].answer).length;
+  const { user, logout } = useAuth();
 
   return (
-    <div className="container py-4">
-      <h2 className="mb-4 text-center text-decoration-underline ">General Education and Professional Education</h2>
-      <h3 className="mb-4 text-center text-body-secondary">Prepared and Programmed by Daniel Salazar De Guzman</h3>
+    <div className="min-vh-100 d-flex flex-column justify-content-center align-items-center bg-danger">
+      <nav className="mb-4 text-center">
+        {user ? (
+          <>
+            <button onClick={() =>{
+              const confirmlogout = window.confirm("Sure kana jan beh? Logout kana?");
+              if(confirmlogout){
+                logout();
+              }
+            }} className="btn btn-danger position-fixed" style={{top: '20 px', right:'20 px', zIndex:1050}}>Logout</button>
+          </>
+        ) : (
+          <>
+          </>
+        )}
+      </nav>
 
-      {questions.map((q, i) => (
-        <div className="mb-4 text-center" key={i}>
-          <Tanong
-            index={i}
-            data={q}
-            selected={answers[i]}
-            onSelect={(choice) => handleAnswer(i, choice)}
-            disabled={submitted}
-            showAnswer={submitted}
-          />
-        </div>
-      ))}
-
-      {!submitted ? (
-        <div className="text-center">
-          <button className="btn btn-warning" onClick={handleSubmit}>
-            Submit Answers
-          </button>
-        <p>The Questions Are Randomly Created by <a href="https://claude.ai/" class="link-info">Claude Ai</a> </p>
-        <p className="text-decoration-underline">Accepting Commission for other Projects, with Friendly Price <a href="https://www.facebook.com/daniel.deguzman.547389/"> - Daniel</a> </p>
-
-        </div>
-      ) : (
-        <div className="alert alert-success text-center mt-4">
-          You scored {score} out of {questions.length} correct!
-        </div>
-      )}
+      <Routes>
+        <Route path="/" element={<ProtectedRoute><Review /></ProtectedRoute>} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
     </div>
   );
 }

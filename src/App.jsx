@@ -35,10 +35,11 @@ export default function App() {
 
   return (
     <div className="container py-4">
-      <h2 className="mb-4 text-center">Madam Luisa Mae's Reviewer</h2>
+      <h2 className="mb-4 text-center text-decoration-underline ">General Education and Professional Education</h2>
+      <h3 className="mb-4 text-center text-body-secondary">Prepared and Programmed by Daniel Salazar De Guzman</h3>
 
       {questions.map((q, i) => (
-        <div className="mb-4" key={i}>
+        <div className="mb-4 text-center" key={i}>
           <Tanong
             index={i}
             data={q}
@@ -52,9 +53,12 @@ export default function App() {
 
       {!submitted ? (
         <div className="text-center">
-          <button className="btn btn-primary" onClick={handleSubmit}>
+          <button className="btn btn-warning" onClick={handleSubmit}>
             Submit Answers
           </button>
+        <p>The Questions Are Randomly Created by <a href="https://claude.ai/" class="link-info">Claude Ai</a> </p>
+        <p className="text-decoration-underline">Accepting Commission for other Projects, with Friendly Price <a href="https://www.facebook.com/daniel.deguzman.547389/"> - Daniel</a> </p>
+
         </div>
       ) : (
         <div className="alert alert-success text-center mt-4">

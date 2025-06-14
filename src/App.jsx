@@ -14,12 +14,28 @@ export default function App() {
       <nav className="mb-4 text-center">
         {user ? (
           <>
+              <button
+              className="btn btn-primary position-fixed"
+              style={{ top: '10px', left: '70px', zIndex: 1050 }}
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              >
+              ↑ Top
+              </button>
+
+              <button
+              className="btn btn-success position-fixed"
+              style={{ top: '10px', right: '10px', zIndex: 1050 }}
+              onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
+              >
+              ↓ Bottom/Skip
+              </button>
             <button onClick={() =>{
               const confirmlogout = window.confirm("Sure kana jan beh? Logout kana?");
               if(confirmlogout){
                 logout();
               }
-            }} className="btn btn-danger position-fixed" style={{top: '20 px', right:'20 px', zIndex:1050}}>Logout</button>
+            }} className="btn btn-danger position-fixed"style={{top: '4%',left: '50%',transform: 'translate(-50%, -50%)',zIndex: 1050,}}>Logout</button>
+
           </>
         ) : (
           <>
@@ -28,8 +44,8 @@ export default function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<ProtectedRoute><Review /></ProtectedRoute>} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/review" element={<ProtectedRoute><Review /></ProtectedRoute>} />
+        <Route path="/" element={<Login />} />
       </Routes>
     </div>
   );

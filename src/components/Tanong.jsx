@@ -34,7 +34,7 @@ export default function Tanong({ index, data, selected, onSelect, disabled, show
         })}
       </div>
       {showAnswer && selected !== data.answer && (
-        <div className="mt-2 text-success small">
+        <div className="mt-2 text-success fs-5">
           ✅ Correct Answer: {data.choices[data.answer]}
         </div>
       )}

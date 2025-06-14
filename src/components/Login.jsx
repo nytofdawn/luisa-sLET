@@ -40,7 +40,7 @@ const Login = () => {
               <li>To Help Future Teachers Review for Free</li>
               <li>Randomized Placement of Questions</li>
               <li>With Correct Answers After Submitted</li>
-              <li>This is not For Sale</li>
+              <li className='text-danger'>THIS IS NOT FOR SALE</li>
             </ul>
           </div>
         </div>

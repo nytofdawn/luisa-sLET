@@ -63,7 +63,7 @@ export default function Review() {
           You scored {score} out of {questions.length} correct!
 
             <p>The Questions Are Randomly Created by <a href="https://claude.ai/" className="link-info" target='_blank' rel='noopener noreferrer'>Claude Ai</a> </p>
-            <p className="text-decoration-underline">Accepting Commission for other Projects, with Friendly Price ---<a href="https://www.facebook.com/daniel.deguzman.547389/" className='link-danger' target='_blank' rel='noopener noreferrer'> Contact me Here!- Daniel</a> </p>
+            <p className="text-decoration-underline">Accepting Commission for other Projects, with Friendly Price <br/> <a href="https://www.facebook.com/daniel.deguzman.547389/" className='link-danger' target='_blank' rel='noopener noreferrer'> Contact me Here!- Daniel</a> </p>
 
         </div>
       )}

@@ -10,7 +10,7 @@ export default function App() {
   const { user, logout } = useAuth();
 
   return (
-    <div className="min-vh-100 d-flex flex-column justify-content-center align-items-center bg-danger">
+    <div className="min-vh-100 d-flex flex-column justify-content-center align-items-center" style={{backgroundImage:'url(https://marketplace.canva.com/EAFhwfMq3ds/1/0/1600w/canva-colorful-cute-cats-illustration-desktop-wallpaper-KBBZLdpjLcM.jpg)', backgroundSize:'cover', backgroundPosition:'center', backgroundRepeat:'no-repeat', width:'100%'}}>
       <nav className="mb-4 text-center">
         {user ? (
           <>

@@ -44,8 +44,8 @@ export default function App() {
       </nav>
 
       <Routes>
-        <Route path="/review" element={<ProtectedRoute><Review /></ProtectedRoute>} />
-        <Route path="/" element={<Login />} />
+        <Route path="/" element={<ProtectedRoute><Review /></ProtectedRoute>} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </div>
   );

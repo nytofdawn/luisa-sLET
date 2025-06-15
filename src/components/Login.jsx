@@ -33,14 +33,16 @@ const Login = () => {
         <div className="col-12 col-md-6">
           <div className="bg-light p-3 rounded shadow-sm">
             <h4 className="text-dark">About this Website</h4>
-            <ul className="text-muted small">
+            <ul className="text-muted large">
               <li>To Practice My Programming Skills</li>
+              <li>Developer's Github Link for <a href="https://github.com/nytofdawn" className="link-success" target="_blank" rel="noopener noreferrer">Reference</a></li>
               <li>The Questions Are Randomly Created by <a href="https://claude.ai/" className="link-success" target="_blank" rel="noopener noreferrer">Claude Ai</a></li>
               <li>Created Specially for Ma'am Luisa Mae</li>
               <li>To Help Future Teachers Review for Free</li>
-              <li>Randomized Placement of Questions</li>
+              <li className='text-danger'>Randomized Placement of Questions</li>
               <li>With Correct Answers After Submitted</li>
               <li className='text-danger'>THIS IS NOT FOR SALE</li>
+              <li className='text-success'>YOU MUST NEED TO UNDERSTAND THE <br/> QUESTIONS & ANSWERS</li>
             </ul>
           </div>
         </div>
@@ -79,7 +81,7 @@ const Login = () => {
           <div className="card p-4 shadow">
             <h3 className="text-center mb-3">Login to Access the Review</h3>
             <p className="text-center small">
-              No account? Message this <a href='https://www.facebook.com/daniel.deguzman.547389' target='_blank' rel='noopener noreferrer'>Account</a> to get yours for free.
+              No account? Follow my <a href='https://www.tiktok.com/@nytdevsaint' target='_blank' rel='noopener noreferrer'>Account</a> to get yours for free.
             </p>
             <form onSubmit={handleLogin}>
               <div className="mb-3">

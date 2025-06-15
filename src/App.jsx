@@ -5,6 +5,7 @@ import Review from './components/Review';
 import Login from './components/Login';
 import ProtectedRoute from './ProtectedRoute';
 import { useAuth } from './Authcontext';
+import ReviewerFORM from './components/ReviewerForm';
 
 export default function App() {
   const { user, logout } = useAuth();
@@ -44,7 +45,8 @@ export default function App() {
       </nav>
 
       <Routes>
-        <Route path="/" element={<ProtectedRoute><Review /></ProtectedRoute>} />
+        <Route path="/form" element={<ProtectedRoute><Review /></ProtectedRoute>} />
+        <Route path="/" element={<ProtectedRoute> <ReviewerFORM /> </ProtectedRoute>} />
         <Route path="/login" element={<Login />} />
       </Routes>
     </div>

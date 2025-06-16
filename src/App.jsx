@@ -16,7 +16,7 @@ export default function App() {
         {user ? (
           <>
               <button
-              className="btn btn-primary position-fixed"
+              className="btn btn-primary position-fixed text-black fw-large d-inline-block glass-effect rounded-pill px-4 py-3"
               style={{ top: '10px', left: '70px', zIndex: 1050 }}
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
               >
@@ -24,7 +24,7 @@ export default function App() {
               </button>
 
               <button
-              className="btn btn-success position-fixed"
+              className="btn btn-success position-fixed text-black fw-large d-inline-block glass-effect rounded-pill px-4 py-3"
               style={{ top: '10px', right: '10px', zIndex: 1050 }}
               onClick={() => window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
               >
@@ -35,7 +35,7 @@ export default function App() {
               if(confirmlogout){
                 logout();
               }
-            }} className="btn btn-danger position-fixed"style={{top: '4%',left: '50%',transform: 'translate(-50%, -50%)',zIndex: 1050,}}>Logout</button>
+            }} className="btn btn-danger position-fixed text-black fw-large d-inline-block glass-effect rounded-pill px-4 py-3"style={{top: '4%',left: '50%',transform: 'translate(-50%, -50%)',zIndex: 1050,}}>Logout</button>
 
           </>
         ) : (
